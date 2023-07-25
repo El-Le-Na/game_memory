@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игра в пары</title>
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./css.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400;600&display=swap');
+    </style>
+    <script src="./main.js" defer></script>
+</head>
+
+<body>
+    <section class="main">
+        <div class="container">
+            <!-- экран 1 -->
+            <div class="screen screen__home">
+                <h1 class="title">
+                    Гульня ў пары
+                </h1>
+                <a href="#" class="start" id="start">Начать игру</a>
+            </div>
+
+            <!-- экран 2 -->
+            <div class="screen screen__game">
+                <h1>Укажите время в минутах</h1>
+                <input type="text" name="time" id="time" placeholder="Введите время в минутах">
+                <button id="start-btn" class="start-btn">Запустить</button>
+            </div>
+
+            <!-- экран 3 -->
+            <div class="screen">
+                <h3>У вас осталось <span id="timer">00:00</span></h3>
+                <!-- <div class="time"></div> -->
+                <div class="board" id="board"></div>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        Изображение от
+        <a
+            href="https://ru.freepik.com/free-vector/realistic-neon-speed-motion-background_14308657.htm#page=2&query=game&position=3&from_view=keyword&track=sph">Freepik</a>
+        от
+        <a
+            href="https://ru.freepik.com/free-photo/3d-illustration-of-blue-and-purple-futuristic-sci-fi-techno-lights-cool-background_27572603.htm#query=game&position=2&from_view=keyword&track=sph">wirestock</a>
+        от
+        <a
+            href="https://ru.freepik.com/free-vector/game-over-with-glitch-effect_7997336.htm#query=game&position=9&from_view=keyword&track=sph">dgim-studio</a>
+    </section>
+</body>
+
+</html>
