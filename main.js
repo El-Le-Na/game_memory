@@ -23,8 +23,7 @@ buttonRun.addEventListener('click', () => {
         screens[1].classList.add('up');
         console.log(`2: ${timer}`);
         startGame();
-    } else { alert('Введите правильное время от 1 до 60 минут') }
-    startGame();
+    } else { alert('Введите правильное время от 1 до 60 минут') }    
     console.log(`3: ${timer}`);
 });
 
@@ -90,6 +89,4 @@ function shuffle(arr) {
 // У каждой карточки будет свой номер из массива произвольных чисел. 
 // Вы также можете создать для этого специальную функцию. count - количество пар.
 
-function startGame(count) {
-
-}
+//function CreateCard(count) {}
