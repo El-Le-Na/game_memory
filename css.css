@@ -17,6 +17,7 @@ html {
     --black: #416;
     --white: #ffa;
     --hover: #16d9e3;
+    --succsess: rgb(10, 236, 213);
 }
 
 a {
@@ -35,10 +36,11 @@ img {
 }
 
 body {
+    /* position: relative; */
     min-width: 320px;
     height: 100vh;
     margin: 0;
-    /*чтобы не было видно других экранов */
+    /*каб не бачыць другіх экранов */
     overflow: hidden;
     font-family: 'Tektur', sans-serif, cursive;
     font-weight: 400;
@@ -61,13 +63,12 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    /*высота 100% видимой части */
     width: 100vw;
-    /*ширина 100% видимой части */
     transition: margin 0.5s ease-out;
     /* background: linear-gradient(90deg, #7899c0 0%, #485563 100%); */
     /* background-image: url('https://img.freepik.com/free-vector/realistic-neon-speed-motion-background_23-2148971519.jpg?w=996&t=st=1690272238~exp=1690272838~hmac=2e40ad4ee21793ec9bad7422cf0d14cdb76ff6606063a908ce194b52efd85402'); */
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
 }
 
@@ -78,9 +79,22 @@ body {
 .screen__game {
     background-image: url('img/start.jpg');
 }
+
+.screen__gameover {
+    background-image: linear-gradient(to bottom,
+            rgba(4, 36, 46, 0.7),
+            rgba(121, 43, 116, 0.7)), url('img/gameover.jpg');
+    /* opacity: .5; */
+}
+
+.screen__gamewin {
+    background-image: linear-gradient(to bottom,
+            rgba(4, 36, 46, 0.7),
+            rgba(121, 43, 116, 0.7)), url('img/wingame.jpg');
+}
+
 .screen.up {
     margin-top: -100vh;
-    /*ширина 100% видимой части */
 }
 
 .title {
@@ -89,34 +103,135 @@ body {
     line-height: 32px;
 }
 
-.start-btn {
-    background-color: transparent;
-    border: 2px solid #c0c0c0;
+.btn {
+    margin-top: 20px;
+    padding: 10px;
     color: #fff;
     cursor: pointer;
     font-family: inherit;
-    padding: 0.5rem 1rem;
-    font-size: 1.5rem;
+    background-color: transparent;
+    border: 2px solid #c0c0c0;
 }
 
-.start-btn:hover {
-    border: 2px solid #16d9e3;
-    color: #16d9e3;
+.btn:focus {
+    border: 2px solid var(--hover);
+    color: var(--white);
+}
+
+.btn:hover {
+    border: 2px solid var(--hover);
+    color: var(--hover);
+}
+
+.screen__start__impt {
+    margin-bottom: 20px;
 }
 
 .board {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     position: relative;
     width: 500px;
-    height: 500px;
+    height: 700px;
     background: linear-gradient(118.38deg, #29323c -4.6%, #485563 200.44%);
     box-shadow: -8px -8px 20px #2a333d, 10px 7px 20px #475462;
     border-radius: 30px;
     overflow: hidden;
 }
 
-.footer {
+.card {
+    width: 19%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 0;
+    font-weight: bold;
+    color: transparent;
+    cursor: pointer;
+    background-color: var(--hover);
+    background-image: url(./img/cat.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    box-shadow: -3px -3px 8px #62a3ee, 4px 2px 5px #0a3d74;
+    border-radius: 15px;
+    transition: color 0.3s, transform 0.3s, background-color 0.3s;
+}
+
+.card:hover {
+    background-color: var(--white);
+}
+
+.card--transform {
+    transform: scale(0, 1);
+}
+
+.card.open {
+    background-image: none;
+    font-size: 40px;
+    color: var(--black);
+    cursor: default;
+    transition: opacity 0.2s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.card.open:hover {
+    background-color: var(--hover);
+}
+
+.card.success {
+    background-image: none;
+    background-color: var(--succsess);
+    font-size: 40px;
+    color: var(--black);
+    cursor: none;
+    box-shadow: -3px 1px 1px #62a3ee;
+    transform: scale(0.95);
+}
+
+.card.success:hover {
+    background-color: var(--succsess);
+}
+
+.timer--red {
+    color: red;
+}
+
+.licensing {
+    display: flex;
+    position: absolute;
+    bottom: 10px;
     font-size: 10px;
+    visibility: hidden;
+    transition: visibility .8s;
+}
+
+.licensing--visibility {
+    visibility: visible;
+}
+
+.licensing-list {
+    position: relative;
+    display: flex;
+    list-style: none;
+    /* z-index: 10; */
+}
+
+.licensing-list-item, .licensing-content {
+    margin-right: 10px;
+}
+
+@media (max-width: 720px) {
+    .board {
+        width: 300px;
+        height: 400px;
+    }
+
+    .card {
+        height: 15%;
+    }
 }

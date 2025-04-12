@@ -23,34 +23,55 @@
                 <h1 class="title">
                     Гульня ў пары
                 </h1>
-                <a href="#" class="start" id="start">Начать игру</a>
+                <a href="#" class="start" id="start">Пачаць гульню</a>
             </div>
 
             <!-- экран 2 -->
-            <div class="screen screen__game">
-                <h1>Укажите время в минутах</h1>
-                <input type="text" name="time" id="time" placeholder="Введите время в минутах">
-                <button id="start-btn" class="start-btn">Запустить</button>
+            <div class="screen screen__start">
+                <h2>Укажыце час у хвілінах</h2>
+                <input class="screen__start__impt" type="text" name="time" id="time" placeholder="Адзнадчце ад 1 да 60">
+
+                <h2>Укажыце колькасць пар</h2>
+                <input class="screen__start__impt" type="text" name="count" id="count"
+                    placeholder="Адзнадчце ад 2 да 10">
+                <button id="start-btn" class="btn">Пачаць</button>
             </div>
 
             <!-- экран 3 -->
-            <div class="screen">
-                <h3>У вас осталось <span id="timer">00:00</span></h3>
+            <div class="screen screen__game">
+                <h3>У вас засталося <span id="timer">00:00</span> хвілін</h3>
                 <!-- <div class="time"></div> -->
                 <div class="board" id="board"></div>
+            </div>
+
+            <!-- экран 4 -->
+            <div class="screen" id="finish-game">
+                <button id="go-start" class="btn">Пачаць зноў</button>
+                <div class="licensing" id="license">
+                    <p class="licensing-content">Ліцэнзаванне малюнкаў ад:</p>
+                    <ul class="licensing-list">
+                        <li class="licensing-list-item"><a target="_blank"
+                                href="https://ru.freepik.com/free-vector/realistic-neon-speed-motion-background_14308657.htm">Freepik</a>
+                        </li>
+                        <li class="licensing-list-item"><a target="_blank"
+                                href="https://ru.freepik.com/free-photo/3d-illustration-of-blue-and-purple-futuristic-sci-fi-techno-lights-cool-background_27572603.htm">wirestock</a>
+                        </li>
+                        <li class="licensing-list-item"><a target="_blank"
+                                href="https://ru.freepik.com/free-vector/game-over-with-glitch-effect_7997336.htm">dgim-studio</a>
+                        </li>
+                        <li class="licensing-list-item"><a target="_blank"
+                                href="https://ru.freepik.com/free-photo/rejoicing-pretty-girl-playing-mobile-phone-game-and-fist-pump-satisfied-with-win_35122682.htm">benzoix</a>
+                        </li>
+                    </ul>
+                    <p>на Freepik</p>
+                </div>
             </div>
         </div>
     </section>
     <section class="footer">
-        Изображение от
-        <a
-            href="https://ru.freepik.com/free-vector/realistic-neon-speed-motion-background_14308657.htm#page=2&query=game&position=3&from_view=keyword&track=sph">Freepik</a>
-        от
-        <a
-            href="https://ru.freepik.com/free-photo/3d-illustration-of-blue-and-purple-futuristic-sci-fi-techno-lights-cool-background_27572603.htm#query=game&position=2&from_view=keyword&track=sph">wirestock</a>
-        от
-        <a
-            href="https://ru.freepik.com/free-vector/game-over-with-glitch-effect_7997336.htm#query=game&position=9&from_view=keyword&track=sph">dgim-studio</a>
+        <div class="footer-content">
+            <h2>Game Memory, author Zharskaya Elena</h2>
+        </div>
     </section>
 </body>
 
